@@ -13,6 +13,11 @@ class ServiceAPI
         $this->service = $service;
     }
 
+    public function check()
+    {
+        return $this->checkAuthentification();
+    }
+
     public function checkAuthentification()
     {
         return $this->service->checkAuthentification();
@@ -23,9 +28,9 @@ class ServiceAPI
         return $this->service->getKeys();
     }
 
-    public function getKey($key)
+    public function getKey($key, $default = null)
     {
-        return $this->service->getKey($key);
+        return $this->service->getKey($key) ?? $default;
     }
 
     public function hasKey($key)

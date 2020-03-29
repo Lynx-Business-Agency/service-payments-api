@@ -8,11 +8,19 @@ class ServicePaymentsApiTest extends TestCase
 {
 
     /** @test */
-    public function check_authentification_method()
+    public function check_checkAuthentification_method()
     {
         $service = new Service(new TestDynamicValueService);
 
         $this->assertTrue($service->checkAuthentification());
+    }
+
+    /** @test */
+    public function check_check_method()
+    {
+        $service = new Service(new TestDynamicValueService);
+
+        $this->assertTrue($service->check());
     }
 
     /** @test */
@@ -29,6 +37,14 @@ class ServicePaymentsApiTest extends TestCase
         $service = new Service(new TestDynamicValueService(['id' => '123']));
 
         $this->assertNull($service->getKey('random_key'));
+    }
+
+    /** @test */
+    public function check_getKey_method_with_default_value()
+    {
+        $service = new Service(new TestDynamicValueService(['id' => '123']));
+
+        $this->assertSame('default value', $service->getKey('random_key', 'default value'));
     }
 
     /** @test */
