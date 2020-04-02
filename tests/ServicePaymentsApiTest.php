@@ -68,6 +68,12 @@ class TestService implements ServiceInterface
     public function getKeys() { return null; }
 
     public function getKey($key) { return null; }
+
+    public function createCustomer(array $attributes = []) { }
+
+    public function retrieveCustomer(string $customerId) { }
+
+    public function deleteCustomer(string $customerId) { }
 }
 
 class TestDynamicValueService extends TestService

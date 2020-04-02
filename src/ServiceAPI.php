@@ -13,6 +13,21 @@ class ServiceAPI
         $this->service = $service;
     }
 
+    public function deleteCustomer(string $customerId)
+    {
+        return $this->service->deleteCustomer($customerId);
+    }
+
+    public function retrieveCustomer(string $customerId)
+    {
+        return $this->service->retrieveCustomer($customerId);
+    }
+
+    public function createCustomer(array $attributes)
+    {
+        return $this->service->createCustomer($attributes);
+    }
+
     public function check()
     {
         return $this->checkAuthentification();
