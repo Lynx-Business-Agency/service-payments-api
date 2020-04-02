@@ -13,6 +13,11 @@ class ServiceAPI
         $this->service = $service;
     }
 
+    public function updateCustomer(string $customerId, array $attributes)
+    {
+        return $this->service->updateCustomer($customerId, $attributes);
+    }
+
     public function deleteCustomer(string $customerId)
     {
         return $this->service->deleteCustomer($customerId);

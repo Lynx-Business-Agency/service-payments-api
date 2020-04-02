@@ -34,6 +34,15 @@ interface ServiceInterface
     public function retrieveCustomer(string $customerId);
 
     /**
+     * Update customer on plateform
+     *
+     * @param string $customerId
+     * @param array $attributes
+     * @return CustomerInterface
+     */
+    public function updateCustomer(string $customerId, array $attributes);
+
+    /**
      * Delete customer on plateform
      *
      * @param string $customerId
