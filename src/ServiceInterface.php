@@ -48,12 +48,4 @@ interface ServiceInterface
      */
     public function getKeys();
 
-    /**
-     * Get key passed in constructor
-     *
-     * @param string $key
-     * @return null|string|array
-     */
-    public function getKey(string $key);
-
 }

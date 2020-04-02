@@ -45,7 +45,7 @@ class ServiceAPI
 
     public function getKey($key, $default = null)
     {
-        return $this->service->getKey($key) ?? $default;
+        return $this->service->getKeys()[$key] ?? $default;
     }
 
     public function hasKey($key)
